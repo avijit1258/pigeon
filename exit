@@ -1,0 +1,105 @@
+[33mcommit 15df70a0677cba0085bf507fc68ec4963a7df419[m
+Merge: bf36cd3 3c0d169
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Mon Jun 27 22:19:56 2016 +0600
+
+    Merge branch 'master' of https://bitbucket.org/avijit1258/busbd
+
+[33mcommit bf36cd3f38acd9f0859175fe4e126b52c8b08f04[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Mon Jun 27 22:19:10 2016 +0600
+
+    adding bus layout
+
+[33mcommit 3c0d169fc0634b7a2a02ec07c2914f41bcab8420[m
+Author: unknown <naziasultana1408@gmail.com>
+Date:   Mon Jun 27 15:26:51 2016 +0600
+
+    welcome updated
+
+[33mcommit 72449139ef66b04edc2680f8f4f6d5624203d7f1[m
+Merge: 41dface 3ea8f69
+Author: unknown <naziasultana1408@gmail.com>
+Date:   Mon Jun 27 15:00:26 2016 +0600
+
+    Merge branch 'master' of https://bitbucket.org/avijit1258/busbd
+    
+    # Conflicts:
+    #	.env
+
+[33mcommit 41dfaceb27e9064794daab6fe15c659bd29b3428[m
+Author: unknown <naziasultana1408@gmail.com>
+Date:   Mon Jun 27 14:57:38 2016 +0600
+
+    nothing
+
+[33mcommit 14a223784bd47b40245d4ac5c332a9b248b68651[m
+Author: unknown <naziasultana1408@gmail.com>
+Date:   Mon Jun 27 14:47:47 2016 +0600
+
+    nothing just pulling
+
+[33mcommit 3ea8f69a27bba59a6ae1403f810766cd92a3cbd9[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Mon Jun 27 00:48:14 2016 +0600
+
+    a big fix done , infinite loop removed, because global middleware and routeMiddleware both registered for SuperAdminMiddleware
+
+[33mcommit 7cb2205b0cf7a3a062b86828ec17665c4eef753d[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Sun Jun 26 21:22:10 2016 +0600
+
+    user model , error fixed
+
+[33mcommit acfb3986d448e1faa3e2f2c74a97d9b03dcccfc6[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Sun Jun 26 21:15:13 2016 +0600
+
+    company admin functionality stated
+
+[33mcommit 922bc77a881fe62fb4ec23b89e526e79b7383637[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Sun Jun 26 17:01:37 2016 +0600
+
+    company admin also added , middleware doing function,
+
+[33mcommit 5c742b851ef66622317c7d6b33a56351b33b0a9e[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Sat Jun 25 09:29:33 2016 +0600
+
+    company admin functionality almost done
+
+[33mcommit 8003cca3fdd0c529f7e4035fc0ae037e69ce92c5[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Sat Jun 25 01:44:28 2016 +0600
+
+    company admin adding started
+
+[33mcommit acb2ff56a61939d593e6a232e96d3c3ed8172cb7[m
+Merge: 55445b2 4b0855a
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Fri Jun 24 02:18:20 2016 +0600
+
+    Confliction of .env removed
+    Merge branch 'master' of https://bitbucket.org/avijit1258/busbd
+    
+    Conflicts:
+    	.env
+
+[33mcommit 55445b2f00838660b93dbd6c137933614b923262[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Fri Jun 24 02:14:45 2016 +0600
+
+    .env added
+
+[33mcommit b6aed43971f789531b0354b7e466c7a931bd86ff[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Fri Jun 24 02:13:45 2016 +0600
+
+    vendor folder deleted
+
+[33mcommit 4b0855afca88efb7064705d9f1520c141f01db28[m
+Author: avijit1258 <avijitbhatt1258@gmail.com>
+Date:   Thu Jun 23 23:51:46 2016 +0600
+
+    git ignore files added
