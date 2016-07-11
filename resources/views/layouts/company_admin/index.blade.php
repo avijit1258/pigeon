@@ -133,14 +133,42 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="/routes" >
+                    <a href="/buses" >
                         <i class="fa fa-bar-chart-o"></i>
-                        <span class="hidden-xs">Route</span>
+                        <span class="hidden-xs">Bus</span>
                     </a>
                 </li>
-                
-
-                
+                <li class="dropdown">
+                    <a href="/buses/create/" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs">Create Bus</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/seat_types" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs">Seat Type</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/seat_types/create" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs">Create Seat Type</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/coach_types" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs"> Coach Type</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="/coach_types/create" >
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span class="hidden-xs">Create Coach Type</span>
+                    </a>
+                </li>
+                                
             </ul>
         </div>
         <!--Start Content-->

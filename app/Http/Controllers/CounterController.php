@@ -24,7 +24,7 @@ class CounterController extends Controller
         $zones = Zone::all()->sortBy('zone_name');
         $counters = Counter::paginate(15);
         $serial = 1;
-        return view('counter.index', compact('counters',  'serial'));
+        return view('counter.index', compact('counters','zones',  'serial'));
     }
 
     /**
@@ -119,7 +119,7 @@ class CounterController extends Controller
     {
         $counter = Counter::destroy($id);
 
-        return \Response::json($counter);
+        return redirect('/counters/');
 
     }
 }

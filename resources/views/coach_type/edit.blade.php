@@ -1,4 +1,4 @@
-@extends('layouts.super_admin.index')
+@extends('layouts.company_admin.index')
 
 @section('content')
     
@@ -6,19 +6,16 @@
            <div>
                 <div class="panel panel-default">
                 <div class="panel-heading">
-                    Please Input New Routes
+                    Please Input New Coach Types
                 </div>
                 <div class="panel-body">
                 
-                                <form action="/companies/" method="post" >
+                                <form action="/coach_types/{{$coach_type->id}}" method="post" >
                                 {{ csrf_field() }}
-                                
+                                <input type="hidden" name="_method" value="PUT" />
 
-                                <label for="input_company">Company Name</label>
-                                <input type="text" name="company_name" id="input_company" class="form-control">
-
-                                
-
+                                <label for="input_coach_type">Coach Type</label>
+                                <input type="text" name="coach_type" id="input_coach_type" class="form-control" value={{$coach_type->coach_type}}>
 
                                 <button type="submit" class = "btn btn-default">
                                     <i class="fa fa-btn fa-plus"></i>Add
@@ -28,6 +25,6 @@
                     </div>   
                             
                 </div>
-   
+           
 
 @endsection

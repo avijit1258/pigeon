@@ -47,6 +47,11 @@ Route::group(['middleware' => 'auth'], function()
 {
 	
     Route::resource('counters', 'CounterController');
+    Route::resource('buses', 'BusController');
+    Route::resource('seat_types', 'SeatTypeController');
+    Route::resource('coach_types', 'CoachTypeController');
+    
+
 });
 Route::group(['middleware' => 'auth.super_admin'], function()
 {

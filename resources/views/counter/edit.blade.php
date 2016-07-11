@@ -16,8 +16,8 @@
                                 <input type="text" name="counter_name" id="input_counter" class="form-control" value={{$counter->counter_name}}>
 
                                
-                                <label for="input_company">Zone</label>
-                                <select name="company_id" class="form-control">
+                                <label for="input_zone">Zone</label>
+                                <select name="zone_id" class="form-control">
                                     @foreach( $zones as $zone)
                                     {
 
