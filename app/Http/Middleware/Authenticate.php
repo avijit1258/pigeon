@@ -27,7 +27,7 @@ class Authenticate
     |
     */
         if (!Auth::user()) {
-            return redirect('/');
+            return redirect()->back();
         }else
         {
             return $next($request);

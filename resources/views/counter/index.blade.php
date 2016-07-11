@@ -56,7 +56,8 @@
                     </table>
             </div>
         </div>
-        
+        </div>
+        </div>
             
         
         <div class="pagination">

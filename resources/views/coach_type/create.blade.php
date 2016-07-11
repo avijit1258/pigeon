@@ -8,12 +8,12 @@
                 <div class="panel-heading">
                     Please Input New Coach Types
                 </div>
-                <div class="panel-body">
-                
+                <div class="panel-body ">
+                    
+                                <div class="col-sm-4">
                                 <form action="/coach_types/" method="post" >
                                 {{ csrf_field() }}
                                 
-
                                 <label for="input_coach_type">Coach Type</label>
                                 <input type="text" name="coach_type" id="input_coach_type" class="form-control">
 
@@ -22,8 +22,12 @@
                                 </button>
 
                             </form> 
+                            </div>
+
                     </div>             
                 </div>
+                </div>
+        </div>
            
 
 @endsection

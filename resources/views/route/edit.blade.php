@@ -6,33 +6,27 @@
  <div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            Please Input New Buses
+            Please Input New Route
         </div>
         <div class="panel-body">
             <div class="col-sm-4">
-                <form action="/buses/" method="post" >
+                <form action="/routes/{{$route->id}}" method="post" >
                     {{ csrf_field() }}
-                    
+                    <input type="hidden" name="_method" value="PUT" />
 
-                    <label for="input_bus_number">Bus Number</label>
-                    <input type="text" name="bus_number" id="input_bus_number" class="form-control">
-                    <label for="input_seats">Seats</label>
-                    <input type="text" name="seats" id="input_seats" class="form-control">
-                    
-
+                    <label for="input_route">Route Name</label>
+                    <input type="text" name="route_name" id="input_route" class="form-control" value={{$route->route_name}}>
 
                     <button type="submit" class = "btn btn-default">
                         <i class="fa fa-btn fa-plus"></i>Add
                     </button>
 
-                </form> 
-            </div>
+                </form>
+            </div> 
         </div>   
         
     </div>
 </div>
 </div>
-
-
 
 @endsection

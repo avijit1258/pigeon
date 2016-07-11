@@ -30,8 +30,8 @@ class SuperAdminMiddleware
             if(\Auth::guard('admins')->user()->type == 'super_admin')
                 return $next($request);
             
-            return redirect('/');
+            return redirect()->back();
         }
-        return redirect('/');
+        return redirect()->back();
     }
 }

@@ -10,7 +10,7 @@
                     Please Input New Company
                 </div>
                 <div class="panel-body">
-                
+                            <div class="col-sm-4">
                                 <form action="/companies/{{$company->id}}" method="POST" >
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="PUT" />
@@ -27,11 +27,11 @@
                                 </button>
 
                             </form> 
+                            </div>
                     </div>   
                             
                 </div>
+                </div>
+        </div>
             
-        
-   
-
 @endsection

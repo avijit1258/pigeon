@@ -9,7 +9,7 @@
                     Please Input New Routes
                 </div>
                 <div class="panel-body">
-                
+                            <div class="col-sm-4">
                                 <form action="/companies/" method="post" >
                                 {{ csrf_field() }}
                                 
@@ -25,9 +25,12 @@
                                 </button>
 
                             </form> 
+                            </div>
                     </div>   
                             
                 </div>
+                </div>
+        </div>
    
 
 @endsection

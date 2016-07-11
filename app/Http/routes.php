@@ -50,6 +50,9 @@ Route::group(['middleware' => 'auth'], function()
     Route::resource('buses', 'BusController');
     Route::resource('seat_types', 'SeatTypeController');
     Route::resource('coach_types', 'CoachTypeController');
+    Route::resource('seats', 'SeatController');
+    Route::resource('routes', 'RouteController');
+    
     
 
 });

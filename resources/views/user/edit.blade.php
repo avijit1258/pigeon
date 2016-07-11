@@ -2,6 +2,8 @@
 
 @section('content')
     
+        <div class="container narrow">
+            <div>
         <div class="panel panel-default">
                 <div class="panel-heading">
                     Please Input New Routes
@@ -55,7 +57,8 @@
                     </div>   
                             
                 </div>
-            
+            </div>
+            </div>
         
    
 

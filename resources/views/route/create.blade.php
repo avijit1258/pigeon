@@ -10,12 +10,12 @@
     </div>
     <div class="panel-body">
       <div class="col-sm-4">
-        <form action="/seat_types/" method="post" >
+        <form action="/routes/" method="post" >
           {{ csrf_field() }}
           
 
-          <label for="input_seat_type">Seat type</label>
-          <input type="text" name="seat_type_name" id="input_seat_type" class="form-control">
+          <label for="input_route">Route Name</label>
+          <input type="text" name="route_name" id="input_route" class="form-control">
 
           <button type="submit" class = "btn btn-default">
             <i class="fa fa-btn fa-plus"></i>Add
@@ -28,8 +28,6 @@
   </div>
 </div>
 </div>
-
-
 
 
 @endsection

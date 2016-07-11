@@ -9,7 +9,7 @@
                     Please Input New Coach Types
                 </div>
                 <div class="panel-body">
-                
+                            <div class="col-sm-4">
                                 <form action="/coach_types/{{$coach_type->id}}" method="post" >
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="PUT" />
@@ -22,9 +22,11 @@
                                 </button>
 
                             </form> 
+                            </div>
                     </div>   
                             
                 </div>
-           
+           </div>
+        </div>
 
 @endsection
