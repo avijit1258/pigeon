@@ -40,7 +40,10 @@ Route::post('/admin/login', 'AdminController@login');
 Route::get('/admin/logout',  'AdminController@logout');
 
 // resouce for company
-
+Route::group(['middleware' => 'auth.super_admin_or_company_admin'], function()
+{
+    Route::resource('users', 'UserController');
+});
 
 
 Route::group(['middleware' => 'auth'], function()
@@ -52,14 +55,13 @@ Route::group(['middleware' => 'auth'], function()
     Route::resource('coach_types', 'CoachTypeController');
     Route::resource('seats', 'SeatController');
     Route::resource('routes', 'RouteController');
-    
-    
-
+    Route::resource('coaches', 'CoachController');
+   
 });
 Route::group(['middleware' => 'auth.super_admin'], function()
 {
 	Route::resource('zones', 'ZoneController');
 	Route::resource('companies', 'CompanyController');
-	Route::resource('users', 'UserController');
+	
 });
 

@@ -5,41 +5,47 @@
             <div>
                 <div class="panel panel-default">
                 <div class="panel-heading">
-                    Edit and Delete Company
+                    Edit and Delete Coach
                 </div>
                 <div class="panel-body">
                     <table class="table table-striped place-table">
                         <thead>
                         <th>Serial</th>
-                        <th>Company Name</th>
+                        <th>Coach Name</th>
+                        <th>Starting Time</th>
+                        <th>Ending Time</th>
                         <th>Modified By</th>
                         <th>Modification Date</th>
-                        <th>Action</th>
 
                         </thead>
 
 
-                        <tbody id='company-list' name = 'company-list' >
-                        @foreach($companies as $company)
-                            <tr id='company{{$company->id}}'>
+                        <tbody id='coach-list' name = 'coach-list' >
+                        @foreach($coaches as $coach)
+                            <tr id='coach{{$coach->id}}'>
 
                                 <td class="table-text">{{$serial++}}</td>
-                                <td class="table-text">{{$company->company_name}}</td>
-                                <td class="table-text">{{$company->modified_by}}</td>
-                                <td class="table-text">{{$company->modification_date}}</td>
+                                <td class="table-text">{{$coach->coach_name}}</td>
+                                <td class="table-text">{{$coach->starting_time}}</td>
+                                <td class="table-text">{{$coach->ending_time}}</td>
                                 
+                                <td class="table-text">{{\App\User::findOrFail($coach->modified_by)->fullname}}</td>
+                                
+                                <td class="table-text">{{$coach->modification_date}}</td>
+                                
+
                         
                                  <td>
-                                    <a href="{{ route('companies.edit', $company->id) }}" class="btn btn-primary">Edit company</a>
+                                    <a href="{{ route('coaches.edit', $coach->id) }}" class="btn btn-primary">Edit coach</a>
                                 </td>
 
 
                                 <td>
-                                    <form action="/companies/{{ $company->id }}" method="POST">
+                                    <form action="/coaches/{{ $coach->id }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
-                                        <button type="submit" id="delete-route-{{ $company->id }}" class="btn btn-danger">
+                                        <button type="submit" id="delete-coach-{{ $coach->id }}" class="btn btn-danger">
                                             <i class="fa fa-btn fa-trash"></i>Delete
                                         </button>
                                     </form>
@@ -56,7 +62,7 @@
             
         
         <div class="pagination">
-                {!! $companies->links() !!}        
+                {!! $coaches->links() !!}        
         </div>
 
 @endsection

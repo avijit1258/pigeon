@@ -39,13 +39,21 @@ class SeatTypeController extends Controller
      */
     public function store(Request $request)
     {
-        $seat_type = new SeatType;
+        //$seat_type = new SeatType;
         
-        $seat_type->seat_type_name = $request->seat_type_name;
+        //$seat_type->seat_type_name = $request->seat_type_name;
+        //$seat_type = $request->all();
         
-        $seat_type->modified_by = \Auth::user()->id;
-        $seat_type->modification_date = Carbon::now();
-        $seat_type->save();
+        //$seat_type->modified_by = \Auth::user()->id;
+        //$seat_type->modification_date = Carbon::now();
+
+        $request['modified_by'] = \Auth::user()->id;
+        $request['modification_date'] = Carbon::now();
+
+        //$seat_type = $request->all();
+        $seat_type = SeatType::create($request->all());
+
+        //$seat_type->save();
 
         return view('seat_type.create');
     }

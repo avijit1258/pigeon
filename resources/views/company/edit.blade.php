@@ -1,4 +1,4 @@
- @extends('layouts.super_admin.index')
+ @extends('layouts.index')
 
 @section('content')
 

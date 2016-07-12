@@ -251,7 +251,7 @@
                             <span class="hidden-xs">Route</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="ajax-link"  href="/routes">List</a></li>
+                            <li><a class="ajax-link"  href="/coaches">List</a></li>
                             <li><a class="ajax-link" href="/routes/create">Create</a></li>
 
                         </ul>
@@ -271,6 +271,8 @@
                     <li><a class="ajax-link" href="/routes/create">Route Create</a></li>
                     <li><a class="ajax-link"  href="/seats">Seat List</a></li>
                     <li><a class="ajax-link" href="/seats/create">Seat Create</a></li>
+                    <li><a class="ajax-link"  href="/coaches">Coach List</a></li>
+                    <li><a class="ajax-link" href="/coaches/create">Coach Create</a></li>
 
                 </ul>
             </div>
