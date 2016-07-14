@@ -6,11 +6,12 @@ $(document).ready(function () {
         $.get(url+'/'+$('#seat_arrange_id').val(), function(data)
         {
             var Data = "<table >";
+            var seat_type_id = $('#seat-type').val();
             for (var i = 1; i <= data.row; i++) {
                 Data += "<tr>";
                 for (var j = 1; j <= data.col; j++) {
                     var SeatNo = (i-1)*data.col+j;
-                    Data += "<td><button id='" + i + "_" + j + "' class='seat_pos' data-name='seat "+SeatNo+"' data-row='"+i+"' data-col='"+j+"' data-seat-type = ''>Seat "+SeatNo+"</button></td>";
+                    Data += "<td><button id='" + i + "_" + j + "' class='seat_pos' data-name='seat "+SeatNo+"' data-row='"+i+"' data-col='"+j+"' data-seat-type ='"+seat_type_id+"' >Seat "+SeatNo+"</button></td>";
                 }
                 Data += "</tr>";
             }
@@ -20,11 +21,7 @@ $(document).ready(function () {
 
         
     });
-    $.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-    })
+    
    
     $("#seat").on('click','.seat_pos', function(){
         $(this).css("background-color","gray");
@@ -39,7 +36,8 @@ $(document).ready(function () {
         $("#column").val(Column);
     });
     
-    $("#submit_form").click(function(){
+    $("#submit_form").click(function(e){
+        e.preventDefault();
         if($("#seat_position").val() != ""){
             var Id = $("#seat_position").val();
             $("#"+Id).attr("data-name",$("#name").val());
@@ -62,7 +60,7 @@ $(document).ready(function () {
     
 
 
-    $("#save_seat").click(function(){
+    $("#save_seat").click(function(e){
         $.each($(".seat_pos"),function(){
             //console.log($(this).attr("data-status"));
             row.push($(this).attr("data-row"));
@@ -72,14 +70,24 @@ $(document).ready(function () {
 
         });
 
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        })
+
+        e.preventDefault(); 
+
         var formdata = {
             row : row ,
             col : col,
             seat_type : seat_type,
             name : name,
+            seat_id: $('#seat_arrange_id').val(),
+
         }
 
-        alert(formdata);
+    
 
         $.ajax({
             type : 'post',
@@ -88,7 +96,7 @@ $(document).ready(function () {
             dataType:'json',
             success: function(data)
             {
-                console.log(data);
+                alert('success');
             }
         });
     });

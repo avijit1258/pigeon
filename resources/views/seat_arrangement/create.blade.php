@@ -24,6 +24,8 @@
         </div>
         <div class="col-md-6">
             
+            <form>
+                {{ csrf_field() }}
             
             <table>
                 <tr>
@@ -50,7 +52,7 @@
                             @foreach( $seat_types as $seat_type)
                             {
 
-                            <option value={{$seat_type->id}} > {{$seat_type->seat_type_name}}  </option> 
+                            <option value={{$seat_type->id}} selected="selected" > {{$seat_type->seat_type_name}}  </option> 
                             }
                             @endforeach 
                         </select>
@@ -60,6 +62,7 @@
                     <td colspan="2"><button id="submit_form">Update Seat</button></td>
                 </tr>
             </table>
+        </form>
         </div>
         <div class="col-md-6">
             <button id="save_seat" class="btn btn-primary">Save Seat</button>

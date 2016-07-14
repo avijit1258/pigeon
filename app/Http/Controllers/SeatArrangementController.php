@@ -59,7 +59,21 @@ class SeatArrangementController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        
+        for($i = 0 ; $i < count($request->row) ; $i++)
+        {
+            $seat_arrangement = new SeatArrangement;
+            $seat_arrangement->seat_id = $request->seat_id;
+            $seat_arrangement->row_id = $request->row[$i];
+            $seat_arrangement->col_id = $request->col[$i];
+            $seat_arrangement->seat_type_id = $request->seat_type[$i];
+            $seat_arrangement->seat_name = $request->name[$i];
+            $seat_arrangement->modified_by = \Auth::user()->id;
+            $seat_arrangement->modification_date = Carbon::now();
+
+            $seat_arrangement->save();
+        }
+
     }
 
     /**
