@@ -6,6 +6,25 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Admin;
+use App\Bus;
+use App\Coach;
+use App\CoachDepartureTime;
+use App\CoachType;
+use App\Company;
+use App\Counter;
+use App\Fare;
+use App\CoachZone;
+use App\Seat;
+use App\SeatArrangement;
+use App\SeatType;
+use App\User;
+use App\Route;
+use App\RouteZone;
+use App\Zone;
+
+use Carbon\Carbon;
+
 class CoachDepartureTimeController extends Controller
 {
     /**
@@ -15,7 +34,10 @@ class CoachDepartureTimeController extends Controller
      */
     public function index()
     {
-        //
+       $coach_departure_times = CoachDepartureTime::paginate(15);
+        $serial = 1;
+
+        return view('coach_departure_time.index', compact('coach_departure_times', 'serial'));
     }
 
     /**
@@ -25,7 +47,10 @@ class CoachDepartureTimeController extends Controller
      */
     public function create()
     {
-        //
+        $coaches = Coach::all();
+        $counters = Counter::all();
+
+        return view('coach_departure_time.create', compact('coaches', 'counters'));
     }
 
     /**
@@ -36,7 +61,19 @@ class CoachDepartureTimeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        for ($i = 0 ; $i < count($request->counter_id) ; $i++) {
+            $counter_departure_time = new CoachDepartureTime;
+            $counter_departure_time->coach_id = $request->coach_id;
+            $counter_departure_time->counter_id = $request->counter_id[$i];
+            $counter_departure_time->time = $request->time;
+            $counter_departure_time->modified_by = \Auth::user()->id;
+            $counter_departure_time->modification_date = Carbon::now();
+
+            $counter_departure_time->save();
+
+        }
+
+        return redirect()->back();
     }
 
     /**

@@ -51,17 +51,20 @@ Route::group(['middleware' => 'auth'], function()
 	
     Route::resource('counters', 'CounterController');
     Route::resource('buses', 'BusController');
-    Route::resource('seat_types', 'SeatTypeController');
-    Route::resource('coach_types', 'CoachTypeController');
     Route::resource('seats', 'SeatController');
     Route::resource('routes', 'RouteController');
     Route::resource('coaches', 'CoachController');
+    Route::resource('route_zones', 'RouteZoneController');
+    Route::resource('seat_arrangements' , 'SeatArrangementController');
+    Route::resource('coach_departure_times', 'CoachDepartureTimeController');
    
 });
 Route::group(['middleware' => 'auth.super_admin'], function()
 {
 	Route::resource('zones', 'ZoneController');
 	Route::resource('companies', 'CompanyController');
+    Route::resource('seat_types', 'SeatTypeController');
+    Route::resource('coach_types', 'CoachTypeController');
 	
 });
 

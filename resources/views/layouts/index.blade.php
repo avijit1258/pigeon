@@ -170,6 +170,30 @@
                         </a>
                         
                     </li>
+                    <li class="dropdown">
+                        <a href="/seat_types" >
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="hidden-xs">Seat Type</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/seat_types/create" >
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="hidden-xs">Create Seat Type</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/coach_types" >
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="hidden-xs"> Coach Type</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/coach_types/create" >
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="hidden-xs">Create Coach Type</span>
+                        </a>
+                    </li>
                     
                 </ul>
             </div>
@@ -190,6 +214,64 @@
         <div class="row">
             <div id="sidebar-left" class="col-xs-2 col-sm-2">
                 <ul class="nav main-menu">
+
+                    <li class="dropdown">
+                        <a href="/seat_arrangements/" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Seat Arrangements</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/seat_arrangements/create" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Seat Arrangement Create</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/coach_departure_times/" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Coach Departure Time</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/coach_departure_times/create" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Coach Departure Time Create</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/fares" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Fare</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/fares/create" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Fare Create</span>
+                        </a>
+
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/route_zones/create" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Route Zones Create</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="/route_zones/" class="dropdown-toggle">
+                            <i class="fa fa-table"></i>
+                            <span class="hidden-xs">Route Zones</span>
+                        </a>
+
+                    </li>
                     <li class="dropdown">
                         <a href="/users" class="dropdown-toggle">
                             <i class="fa fa-table"></i>
@@ -221,30 +303,7 @@
                             <span class="hidden-xs">Create Bus</span>
                         </a>
                     </li>
-                    <li class="dropdown">
-                        <a href="/seat_types" >
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span class="hidden-xs">Seat Type</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/seat_types/create" >
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span class="hidden-xs">Create Seat Type</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/coach_types" >
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span class="hidden-xs"> Coach Type</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/coach_types/create" >
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span class="hidden-xs">Create Coach Type</span>
-                        </a>
-                    </li>
+                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">
                             <i class="fa fa-list"></i>

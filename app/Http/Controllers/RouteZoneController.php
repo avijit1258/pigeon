@@ -5,6 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Admin;
+use App\Bus;
+use App\Coach;
+use App\CoachDepartureTime;
+use App\CoachType;
+use App\Company;
+use App\Counter;
+use App\Fare;
+use App\CoachZone;
+use App\Seat;
+use App\SeatArrangement;
+use App\SeatType;
+use App\User;
+use App\Route;
+use App\RouteZone;
+use App\Zone;
+
+use Carbon\Carbon;
 
 class RouteZoneController extends Controller
 {
@@ -15,7 +33,10 @@ class RouteZoneController extends Controller
      */
     public function index()
     {
-        //
+        $route_zones = RouteZone::paginate(15);
+        $serial = 1;
+
+        return view('route_zone.index', compact('route_zones', 'serial'));
     }
 
     /**
@@ -25,7 +46,10 @@ class RouteZoneController extends Controller
      */
     public function create()
     {
-        //
+        $routes = Route::all();
+        $zones = Zone::all();
+
+        return view('route_zone.create', compact('routes', 'zones'));
     }
 
     /**
@@ -36,7 +60,20 @@ class RouteZoneController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        for ($i = 0 ; $i < count($request->zone_id) ; $i++) {
+            $route_zone = new RouteZone;
+            $route_zone->route_id = $request->route_id;
+            $route_zone->zone_id = $request->zone_id[$i];
+            $route_zone->sequel = $i+1;
+            $route_zone->modified_by = \Auth::user()->id;
+            $route_zone->modification_date = Carbon::now();
+
+            $route_zone->save();
+
+        }
+
+        return redirect()->back();
     }
 
     /**

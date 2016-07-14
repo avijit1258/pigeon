@@ -59,7 +59,8 @@ class SeatController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Seat::find($id);
+        return $data;
     }
 
     /**

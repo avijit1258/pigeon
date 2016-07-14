@@ -4,7 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use App\Http\Requests;
+use App\Admin;
+use App\Bus;
+use App\Coach;
+use App\CoachDepartureTime;
+use App\CoachType;
+use App\Company;
+use App\Counter;
+use App\Fare;
+use App\CoachZone;
+use App\Seat;
+use App\SeatArrangement;
+use App\SeatType;
+use App\User;
+use App\Route;
+use App\Zone;
+
+use Carbon\Carbon;
 
 class SeatArrangementController extends Controller
 {
@@ -15,7 +33,10 @@ class SeatArrangementController extends Controller
      */
     public function index()
     {
-        //
+        $seat_arrangements = SeatArrangement::paginate(20);
+        $serial = 1;
+
+        return view('seat_arrangement.index', compact('seat_arrangements', 'serial'));
     }
 
     /**
@@ -25,7 +46,9 @@ class SeatArrangementController extends Controller
      */
     public function create()
     {
-        //
+        $seats = Seat::all();
+        $seat_types = SeatType::all();
+        return view('seat_arrangement.create',compact('seats', 'seat_types'));        
     }
 
     /**
@@ -36,7 +59,7 @@ class SeatArrangementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
